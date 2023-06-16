@@ -1,0 +1,49 @@
+Data Types:
+
+    bigIncrements('column_name'): Auto-incrementing unsigned BIGINT (primary key).
+    bigInteger('column_name'): BIGINT equivalent column.
+    binary('column_name'): BLOB equivalent column.
+    boolean('column_name'): BOOLEAN equivalent column.
+    char('column_name', length): CHAR equivalent column with a length.
+    date('column_name'): DATE equivalent column.
+    dateTime('column_name'): DATETIME equivalent column.
+    decimal('column_name', total_digits, decimal_digits): DECIMAL equivalent column with a total number of digits and decimal places.
+    double('column_name', total_digits, decimal_digits): DOUBLE equivalent column with a total number of digits and decimal places.
+    enum('column_name', array_of_values): ENUM equivalent column with a set of predefined string values.
+    float('column_name', total_digits, decimal_digits): FLOAT equivalent column with a total number of digits and decimal places.
+    integer('column_name'): INTEGER equivalent column.
+    json('column_name'): JSON equivalent column.
+    jsonb('column_name'): JSONB equivalent column.
+    longText('column_name'): LONGTEXT equivalent column.
+    mediumInteger('column_name'): MEDIUMINT equivalent column.
+    mediumText('column_name'): MEDIUMTEXT equivalent column.
+    morphs('column_name'): Adds nullable INTEGER {$name}_id and STRING {$name}_type columns for polymorphic relations.
+    nullableMorphs('column_name'): Adds nullable INTEGER {$name}_id and STRING {$name}_type columns for polymorphic relations.
+    nullableTimestamps(): Adds nullable created_at and updated_at TIMESTAMP equivalent columns.
+    rememberToken(): Adds nullable remember_token VARCHAR(100) equivalent column.
+    set('column_name', array_of_values): SET equivalent column with a set of predefined string values.
+    smallInteger('column_name'): SMALLINT equivalent column.
+    string('column_name', length): VARCHAR equivalent column with a length.
+    text('column_name'): TEXT equivalent column.
+    time('column_name'): TIME equivalent column.
+    timestamp('column_name'): TIMESTAMP equivalent column.
+    timestamps(): Adds created_at and updated_at TIMESTAMP equivalent columns.
+    unsignedBigInteger('column_name'): Unsigned BIGINT equivalent column.
+    unsignedDecimal('column_name', total_digits, decimal_digits): Unsigned DECIMAL equivalent column with a total number of digits and decimal places.
+    unsignedInteger('column_name'): Unsigned INTEGER equivalent column.
+    unsignedMediumInteger('column_name'): Unsigned MEDIUMINT equivalent column.
+    unsignedSmallInteger('column_name'): Unsigned SMALLINT equivalent column.
+    unsignedTinyInteger('column_name'): Unsigned TINYINT equivalent column.
+    uuid('column_name'): UUID equivalent column.
+
+Constraints:
+
+    nullable(): Allows the column to be NULL.
+    default(value): Sets the default value for the column.
+    unsigned(): Sets the column to be unsigned.
+    unique(): Adds a unique index to the column.
+    index(): Adds an index to the column.
+    primary(): Makes the column the primary key of the table.
+    foreign('foreign_column_name')->references('primary_column_name')->on('related_table_name'): Adds a foreign key constraint to the column, referencing a primary key column in another table. You can also add onDelete() and onUpdate() methods to specify what should happen when the referenced record is deleted or updated.
+
+These are just some of the data types and constraints available in Laravel's schema builder. By using these data types and constraints, you can create tables with columns that have the exact structure and behavior you need for your application.
