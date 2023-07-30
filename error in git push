@@ -1,0 +1,29 @@
+If you've successfully resolved the conflicts on your local PC and the files look good there, but you still see "<<<<<<< HEAD" markers when you upload the branch and pull it on your shared hosting, it's possible that the conflict resolution wasn't applied correctly before pushing the changes.
+
+Here are some steps you can take to resolve this issue:
+
+1. Double-check Conflict Resolution: Make sure that you've correctly resolved the conflicts on your local PC before pushing the changes. Open the files with conflicts again and verify that the "<<<<<<< HEAD" markers and other conflict markers have been removed, and the file contains the intended changes.
+
+2. Commit and Push: After resolving the conflicts locally, commit the changes again and push the branch to the remote repository. Use the following commands:
+
+   ```bash
+   git add .        # Add all changes
+   git commit -m "Resolved conflicts"
+   git push origin <branch-name>
+   ```
+
+   Make sure to replace `<branch-name>` with the name of your branch.
+
+3. Verify Changes on Remote: After pushing the changes, go to your remote hosting platform (e.g., GitHub, GitLab, Bitbucket, etc.) and check the branch and commit to ensure that the changes have been pushed correctly without any conflict markers.
+
+4. Pull on Shared Hosting: Now, on your shared hosting server, perform a clean pull of the branch to ensure you get the latest changes without conflicts. Use the following commands:
+
+   ```bash
+   git fetch origin
+   git checkout <branch-name>
+   git reset --hard origin/<branch-name>
+   ```
+
+   This will fetch the latest changes from the remote repository and reset the branch to match the remote version exactly.
+
+By following these steps, you should be able to ensure that the conflict-free changes you made on your local PC are correctly propagated to the shared hosting server. If you still encounter issues, double-check the steps above and ensure that you're working with the correct branch and repository on your shared hosting server.
